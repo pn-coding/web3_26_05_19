@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // *중첩 반복문
+        // =>반복문 안의 반복문 
+        // =>부모가 한번 출력될때 자식 반복문은 전체를 순회함 
+
+        for(let i = 1; i < 4; i++){
+            document.write(`<h3>${i}</h3>`);
+
+            for(let e = 4; e < 7; e++){
+                document.write(e);
+            }
+        }
+
+        // *문제
+        // =>1~8단 까지 모든 구구단 출력 
+        // 출력결과)
+        // 1단
+        // 1x1=1
+        // 1x2=2
+        // 1x9=9
+
+        // ....생략
+
+        // 9단
+        // 9*1=9
+        // 9*9=81
+
+        for(let i = 1; i < 10; i++){
+            document.write(`${i}단<br>`);
+            for(let e = 1; e < 10; e++){
+                document.write(`${i} x ${e} = ${i * e}<br>`);
+            }
+        }
+
+
+    </script>
+
+</head>
+<body>
+    
+    
+</body>
+</html>
