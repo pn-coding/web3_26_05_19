@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .con{
+            width: 30% ;
+            height: 400px;
+            border:1px solid #dbdbdb;
+            border-radius: 20px;
+            margin-bottom: 30px;
+        }
+
+    </style>
+    <script>
+
+        // *문제
+        // =>아래 배열을 사용
+        // =>반복문을 사용하여 배열안에 요소들 하나씩 출력
+
+
+        const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        // console.log(nums[0]);
+        // console.log(nums[1]);
+        // console.log(nums[2]);
+        // console.log(nums[3]);
+        // console.log(nums[4]);
+        // console.log(nums[5]);
+        // console.log(nums[6]);
+        // console.log(nums[7]);
+        // console.log(nums[8]);
+        // console.log(nums[9]);
+        // console.log(nums[10]);
+
+        // for(let i = 0; i < nums.length; i++){
+        //     console.log(nums[i]);
+        // }
+
+        // for(let i = nums.length - 1; i >= 0; i--){
+        //     console.log(nums[i]);
+        // }
+
+        for(let i = 0; i < nums.length; i++){
+            document.write(`
+            <div class="con">
+                <img src="#" alt=컨텐츠 이미지${i + 1}>
+               <h2>${nums[i]}번 컨텐츠 </h2>              
+            </div>
+            `);
+        }
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
