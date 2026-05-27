@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // *문제
+        // 1.객체 하나 제작
+        // 2.객체의 주제는 유저 정보를 저장하는 객체
+        // 3.속성에 맞게 속성값 지정
+
+        // 출력결과
+        // ##유저 정보##
+        // 유저 아이디: JavaScript
+        // 이메일: js@JavaScript.com
+        // 프로필 이미지: js.jpg
+
+        // =>write를 사용할것
+        // =>h2태그를 사용할것 
+
+        // const userInfo = {
+        //     id: 0,
+        //     username: 'JavaScript',
+        //     email: "js@JavaScript.com",
+        //     profileImg: 'js.jpg'
+        // };
+
+        // document.write("<h1>##유저 정보##</h1>");
+        // document.write(`<h2>유저 아이디: ${userInfo.username}</h2>`);
+        // document.write(`<h2>이메일: ${userInfo.email}</h2>`);
+        // document.write(`<h2>프로필 이미지: ${userInfo.profileImg}</h2>`);
+
+
+        // *문제2
+        // =>prompt를 이용하여 자기 소개 출력
+        // =>객체, 메서드, this 활용
+
+        // 출력결과
+        // 이름: 이정환
+        // 좋아하는 언어: JS
+        // 취미: 영화보기 
+
+        const inputName = prompt("이름을 입력해주세요");
+        const inputLan = prompt("좋아하는 언어를 입력해주세요");
+        const inputHobby = prompt("취미를 입력해주세요");
+
+        const userInfo = {
+            name: inputName,
+            language: inputLan,
+            hobby: inputHobby,
+            intro: function(){
+                document.write(`<h2>이름: ${this.name}</h2>`);
+                document.write(`<h2>좋아하는 언어: ${this.language}</h2>`);
+                document.write(`<h2>취미: ${this.hobby}</h2>`);
+            }
+        }
+
+        userInfo.intro();
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
