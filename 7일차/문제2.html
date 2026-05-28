@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        const users = [
+            {
+                id:0,
+                username: 'user1',
+                email: "user1@user1.com",
+                avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7OrtM7FfDgFfgOmRqL4R__bU5cjx1ltwy1A&s'
+            },
+            {
+                id:1,
+                username: 'user2',
+                email: "user2@user2.com",
+                avatar: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/1280px-React_Logo_SVG.svg.png'
+            },
+            {
+                id:2,
+                username: 'user3',
+                email: "user3@user3.com",
+                avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEc9A_S6BPxCDRp5WjMFEfXrpCu1ya2OO-Lw&s'
+            },
+            {
+                id:3,
+                username: 'user4',
+                email: "user4@user4.com",
+                avatar: 'https://i.namu.wiki/i/DLvI3H3jjaK2ONvOQZCzadfWeMkXkNRamQJr_O4oY7vah_ALG9oA6qqP-3DFbqs_fyUDHO7oIrtosaxe1jGX1A.svg'
+            },
+        ];
+
+        for(let i = 0; i < users.length; i++){
+            document.write(`<h2>`);
+            document.write(`${users[i].id + 1} 번째 유저<br>`);
+            document.write(`아이디: ${users[i].username}<br>`);
+            document.write(`email: ${users[i].email}<br><br>`);
+            document.write(`<img width="200" src="${users[i].avatar}"><br>`);
+            document.write(`</h2>`);
+            document.write(`<hr>`);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

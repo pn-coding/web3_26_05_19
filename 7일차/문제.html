@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // *문제
+        // const user = {
+        //     username: "js",
+        //     password: "123"
+        // }
+        // =>위 객체 사용
+        // =>prompt를 활용하여 유저에게 아이디, 패스워드 입력받기
+        // =>입력받은 내용과 객체에 저장된 내용 비교하여 
+        // 아이디가 틀리면 아이디가 틀렸습니다. 
+        // 패스워드가 틀리면 패스워드가 틀렸습니다.
+        // 아이디, 패스워드가 맞으면 
+        // 00님 로그인 되었습니다. 라고 출력
+        // 이때 00님은 로그인한 유저의 아이디명으로 
+
+        const user = {
+            username: "js",
+            password: "123"
+        }
+
+
+        const inputUsername = prompt("아이디를 입력해주세요");
+        const inputPassword = prompt("패스워드를 입력해주세요");
+
+        if(user.username !== inputUsername){
+            document.write("<h2>아이디가 틀렸습니다.</h2>");
+        }else if(user.password !== inputPassword){
+            document.write("<h2>비밀번호가 틀렸습니다.</h2>");
+        }else if(user.username === inputUsername && user.password === inputPassword){
+            document.write(`<h2>${user.username}님 로그인 되었습니다.</h2>`);
+        }else{
+            document.write("알수없는 에러가 발생했습니다 다시 로그인 해주세요");
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
