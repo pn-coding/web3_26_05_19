@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- *문제 
+    => con클래스 태그 10개 제작
+    => 제작한 엘리먼트에 1번째 ~ 10번째 까지 내용 추가
+    => body에 출력  -->
+
+
+    <script>
+
+        
+        // const conAll = document.querySelectorAll(conEl);
+        // const bodyEl = document.querySelector('body');
+
+        for(let i = 0; i < 10; i++){
+            const conEl = document.createElement('div');
+            conEl.innerText = `${i + 1} 번째`;
+            // console.log(conEl);
+            document.body.appendChild(conEl);
+        }
+        
+
+    </script>
+    
+</body>
+</html>

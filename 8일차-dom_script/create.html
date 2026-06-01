@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        // *createElement()
+        // =>새로운 태그를 생성함
+
+        // *appendChild()
+        // =>선택자의 자식으로 추가
+
+        const pEl = document.createElement('p');
+        const bodyEl = document.querySelector('body');
+
+        pEl.innerText = '새로만들어진 p태그';
+        // 새로만들어진 p태그안에 내용을 넣고싶다
+
+        bodyEl.appendChild(pEl);
+        // =>body에 새로만들어진 pEl를 넣고싶다
+
+        
+        
+
+    </script>
+    
+</body>
+</html>
