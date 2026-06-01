@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+            background: #000;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="box"></div>
+
+    <div class="dot"></div>
+
+    <script>
+
+        // *이벤트
+        // =>선택자.addEventListener('이벤트명', 함수);
+
+        const boxEl = document.querySelector('.box');
+        
+
+        // boxEl.addEventListener('click', () => {
+        //     console.log('클릭함');
+        // });
+
+        const boxClick = () => {
+            console.log('클릭함');
+        };
+
+        boxEl.addEventListener('click', boxClick);
+
+
+    </script>
+
+</body>
+</html>

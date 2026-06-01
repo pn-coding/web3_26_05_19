@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .con_wrap{
+            width: 1400px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+
+        .con{
+            width: 32%;
+        }
+
+        .bg{
+            height: 400px;
+            background-color: lightgray;
+        }
+
+        .con h3{
+            font-size: 28px;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .active{
+            background-color: mediumturquoise;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="con_wrap">
+
+        <div class="con">
+            <div class="bg active"></div>
+            <h3>title</h3>
+        </div>
+
+        <div class="con">
+            <div class="bg"></div>
+            <h3>title</h3>
+        </div>
+
+        <div class="con">
+            <div class="bg"></div>
+            <h3>title</h3>
+        </div>
+
+    </div>
+
+    <script>
+
+        const boxEl_1 = document.querySelector('.con:nth-child(1) .bg');
+        
+        const boxAll = document.querySelectorAll('.bg');
+
+        // boxEl_1.classList.add('active');
+        // =>클래스 추가할때
+
+        // boxEl_1.classList.remove('bg');
+        // =>클래스를 제거할때
+
+        // boxEl_1.classList.toggle('active');
+        // =>클래스 여부에 따라 클래스를 추가 또는 제거를 함
+
+        // const check_active = boxEl_1.classList.contains('active');
+        // =>클래스 포함 여부에 따라 boolean값으로 반환함
+        // console.log(check_active);
+
+        const check_active_2 = boxAll[1].classList.contains('active');  
+        console.log(check_active_2);
+
+    </script>
+
+</body>
+</html>
