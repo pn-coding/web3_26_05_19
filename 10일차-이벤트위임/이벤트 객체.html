@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent{
+            width: 300px;
+            height: 300px;
+            background-color: lightgray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+    <h3></h3>
+
+    <script>
+
+        const parentEl = document.querySelector('.parent');
+        const hEl = document.querySelector('h3');
+
+        const clickHandler = (e) => {
+            // console.log(e);
+            // =>이벤트 정보를 객체로 반환함
+
+            // console.log(e.currentTarget);
+            // =>현재 이벤트가 적용된 요소
+
+            // console.log(e.target);
+            // =>직접 클릭한 요소를 선택함
+
+            console.log(e.target.parentNode);
+            // =>클릭한 부모 요소로 접근함
+
+            hEl.innerText = `
+                x좌표값: ${e.clientX} 
+                y좌표값: ${e.clientY}
+            `;
+        }
+
+        parentEl.addEventListener('click', clickHandler);
+
+    </script>
+
+</body>
+</html>

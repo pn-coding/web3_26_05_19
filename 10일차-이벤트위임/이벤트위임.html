@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .con_wrap{
+            max-width: 500px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background-color: gray;
+        }
+
+        .con{
+            width: 120px;
+            height: 120px;
+            background-color: salmon;
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .active{
+            background-color: rgb(67, 238, 215);
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="con_wrap">
+        <div class="con">1</div>
+        <div class="con">2</div>
+        <div class="con">3</div>
+    </div>
+
+    <script>
+
+        const conAll = document.querySelectorAll('.con');
+        const conWrapEl = document.querySelector('.con_wrap');
+
+        // conAll[0].addEventListener('click', () => {
+        //     conAll[0].classList.toggle('active');
+        // });
+
+        // conAll[1].addEventListener('click', () => {
+        //     conAll[1].classList.toggle('active');
+        // });
+
+        // conAll[2].addEventListener('click', () => {
+        //     conAll[2].classList.toggle('active');
+        // });
+
+        // for(let i = 0; conAll.length; i++){
+        //     conAll[i].addEventListener('click', () => {
+        //         conAll[i].classList.toggle('active');
+        //     });
+        // }
+
+
+        const clickHandler = (e) => {
+            // e.target.classList.toggle('active');
+            // 만약에 클릭한 요소가 .con라는 클래스가 포함되어 있다면
+            // 클릭한 요소에 토글로 active 클래스를 추가해라
+
+            if(e.target.classList.contains('con')){
+                e.target.classList.toggle('active');
+            }
+        }
+
+        conWrapEl.addEventListener('click', clickHandler);
+
+    </script>
+
+</body>
+</html>
