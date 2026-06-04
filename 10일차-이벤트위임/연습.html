@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            max-width: 450px;
+            width: 100%;
+            margin: 100px auto;
+        }
+
+        .con{
+            margin-bottom: 50px;
+            border: 1px solid #dbdbdb;
+            border-radius: 10px;
+        }
+
+        .bg{
+            height: 400px;
+            background-color: lightgray;
+        }
+
+        .bottom_wrap{
+            padding: 20px 10px;
+        }
+
+        .heart{
+            color: gray;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .red_heart{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+
+        <div class="con">
+
+            <div class="bg"></div>
+            <div class="bottom_wrap">
+                <div class="heart">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="con">
+
+            <div class="bg"></div>
+            <div class="bottom_wrap">
+                <div class="heart">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="con">
+
+            <div class="bg"></div>
+            <div class="bottom_wrap">
+                <div class="heart">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // 눌렀을때 색이 바뀜
+        // 하트를 눌렀을때 색이 빨간색으로 변경됨 
+        // 색이 빨간색이라면 선으로 변경됨
+
+        const wrapEl = document.querySelector('.wrap');
+
+        const likeHeadler = (e) => {
+            // console.log(e.target);
+            // 클릭한 엘리먼트가 선 하트라면 클릭한 엘리먼트가 빨간 하트로 변경
+            const heartEl = e.target;
+
+            if(heartEl.classList.contains('fa-regular')){
+                heartEl.parentNode.innerHTML = '<i class="fa-solid fa-heart red_heart"></i>';
+            }else if(heartEl.classList.contains('fa-solid')){
+                heartEl.parentNode.innerHTML = '<i class="fa-regular fa-heart"></i>';
+            }
+        }
+
+        wrapEl.addEventListener('click', likeHeadler);
+
+    </script>
+    
+</body>
+</html>
