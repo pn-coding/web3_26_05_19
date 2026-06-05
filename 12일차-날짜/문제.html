@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="time_wrap">
+        <h2>현재시간</h2>
+        <div class="clock">00:00:00</div>
+    </div>
+
+    <script>
+
+        const clockEl = document.querySelector('.clock');
+
+        // *padStart
+        // =>현재 문자의 시작 부분에 다른 문자로 채워 
+        // 주어진 길이를 만족하는 새로운 문자열로 반환함
+
+        const timeHandler = () => {
+            const date = new Date();
+            const hour = String(date.getHours()).padStart(2, "0");
+            const min = String(date.getMinutes()).padStart(2, "0");
+            const sec = String(date.getSeconds()).padStart(2, "0");
+
+            clockEl.innerText = `${hour} : ${min} : ${sec}`;
+        }
+
+        timeHandler();
+
+        setInterval(timeHandler, 1000);
+
+    </script>
+    
+</body>
+</html>
