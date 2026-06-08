@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header{
+            width: 100%;
+            height: 80px;
+            font-size: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .header_active{
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        section{
+            height: 100vh;
+            border: 2px solid red;
+        }
+
+        .section_1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            background-color: lightgray;
+        }
+
+        .section_2{
+            padding: 150px 250px;
+        }
+
+        .title_2{
+            font-size: 100px;
+        }
+
+        .con_wrap{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .con{
+            width: 32%;
+            height: 500px;
+            background-color: lightgray;
+        }
+
+        .section_3{
+            height: 500px;
+            background-color: lightgray;
+            font-size: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrap">
+
+        <header>
+            <h3>Header</h3>
+        </header>
+
+        <section class="section_1">
+            <h3 class="title_1">Title</h3>
+            <h3 class="title_1">Section One</h3>
+        </section>
+
+        <section class="section_2">
+            <h3 class="title_2">Title2</h3>
+
+            <div class="con_wrap">
+                <div class="con con_1"></div>
+                <div class="con con_2"></div>
+                <div class="con con_3"></div>
+            </div>
+        </section>
+
+        <section class="section_3">
+            <h3>Section Three</h3>
+        </section>
+
+    </div>
+
+</body>
+</html>
