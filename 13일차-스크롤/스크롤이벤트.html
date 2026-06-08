@@ -38,10 +38,11 @@
         }
 
         .section_1{
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 100px;
+            font-size: 50px;
             background-color: lightgray;
         }
 
@@ -50,7 +51,7 @@
         }
 
         .title_2{
-            font-size: 100px;
+            font-size: 50px;
         }
 
         .con_wrap{
@@ -62,12 +63,28 @@
             width: 32%;
             height: 500px;
             background-color: lightgray;
+            transform: translateY(200px);
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        .con:nth-child(2){
+            transition-duration: 1s;
+        }
+
+        .con:nth-child(3){
+            transition-duration: 1.5s;
+        }
+
+        .con_active{
+            transform: translateY(0);
+            opacity: 1;
         }
 
         .section_3{
             height: 500px;
             background-color: lightgray;
-            font-size: 100px;
+            font-size: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -104,6 +121,41 @@
         </section>
 
     </div>
+
+    
+    <script>
+
+        const headerEl = document.querySelector('header');
+        const conAll = document.querySelectorAll('.con');
+        const sec_2 = document.querySelector('.section_2');
+
+
+        const handleScroll = () => {
+            // console.log('스크롤 작동함');
+
+            const pageY = pageYOffset;
+            // =>스크롤 바의 높이를 가져옴
+            console.log(pageY);
+            const sec_2_top = sec_2.offsetTop;
+            // =>선택자의 top 값을 px단위로 가져옴
+
+            if(pageY >= 300){
+                headerEl.classList.add('header_active');
+            }else{
+                headerEl.classList.remove('header_active');
+            }
+            // header scroll end
+
+            if(pageY > sec_2_top / 2){
+                for(let i = 0; i < conAll.length; i++){
+                    conAll[i].classList.add('con_active');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+    </script>
 
 </body>
 </html>

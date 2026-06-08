@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            height: 300vh;
+        }
+
+        .box{
+            width: 300px;
+            height: 300px;
+            background-color: teal;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="box"></div>
+
+    <!-- *문제
+    =>body의 높이값 300vh로 스타일 지정
+    =>스크롤 내릴때마다 박스가 회전되게 만들기  -->
+
+    <script>
+
+        const boxEl = document.querySelector('.box');
+        
+        const handleScroll = () => {
+            const pageY = window.pageYOffset;
+            boxEl.style.transform = `translate(-50%, -50%) rotate(${pageY}deg)`;
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+    </script>
+
+</body>
+</html>
