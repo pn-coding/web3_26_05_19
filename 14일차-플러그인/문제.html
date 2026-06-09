@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,li{
+            list-style: none;
+        }
+
+        img{
+            width: 100%;
+            display: block;
+        }
+
+        .wrap{
+            max-width: 450px;
+            width: 100%;
+            margin: 100px auto;
+            padding: 30px;
+        }
+
+        .con{
+            background-color: #eee;
+            border-radius: 10px;
+            border: 1px solid #f1f1f1;
+        }
+
+        header{
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .more_btn{
+            cursor: pointer;
+        }
+
+        .user_wrap{
+            display: flex;
+            align-items: center;
+        }
+
+        .profile_img{
+            width: 40px;
+            height: 40px;
+            background-color: gray;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .bg{
+            width: 100%;
+            height: 400px;
+            background-color: gray;
+        }
+
+        .con_img:nth-child(1){
+            height: 100%;
+            background: url() no-repeat center / cover;
+        }
+
+        .con_img:nth-child(2){
+            height: 100%;
+            background: url() no-repeat center / cover;
+        }
+
+        .con_img:nth-child(3){
+            height: 100%;
+            background: url() no-repeat center / cover;
+        }
+
+        .bottom_wrap{
+            padding: 15px;
+        }
+
+        .heart{
+            font-size: 20px;
+            color: #555;
+            cursor: pointer;
+        }
+
+        .like{
+            margin-top: 10px;
+        }
+
+        .modal_wrap{
+            width: 100%;
+            height: 100vh;
+            display: none;
+            justify-content: center;
+            align-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            z-index: 10;
+        }
+
+        .show_active{
+            display: flex;
+        }
+
+        .list_wrap{
+            max-width: 350px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: white;
+        }
+
+        .list_wrap li{
+            text-align: center;
+            padding: 20px 0;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .list_wrap li:last-child{
+            color: crimson;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="wrap">
+
+        <div class="con">
+            
+            <header>
+                
+                <div class="user_wrap">
+                    <div class="profile_img"></div>
+                    <div class="username"></div>
+                </div>
+                <div class="more_btn">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+
+            </header>
+
+            <div class="swiper bg">
+                
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide con_img"></div>
+                    <div class="swiper-slide con_img"></div>
+                    <div class="swiper-slide con_img"></div>
+                </div>
+                
+                <div class="swiper-pagination pagination"></div>
+            
+            </div>
+
+            <div class="bottom_wrap">
+                <div class="heart">
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+                <p class="like">좋아요 <span>0</span>개</p>
+            </div>
+
+            <div class="modal_wrap">
+                <up class="list_wrap">
+                    <li>팔로우</li>
+                    <li>저장</li>
+                    <li>게시물로 이동</li>
+                    <li class="cancel">취소</li>
+                </up>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        *문제
+        1.메뉴 클릭시 모달 창 띄우기 (classList활용)
+        2.bg 스와이퍼 활용
+        3.하트 누르면 빨간색 채우기
+        4.하트 누르면 좋아요 카툰드 1 증가
+
+    </script>
+
+</body>
+</html>
