@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <input type="text" placeholder="내용을 입력해주세요">
+        <button>입력</button>
+    </form> 
+
+    <script>
+
+        const formEl = document.querySelector('form');
+        const inputEl = document.querySelector('input');
+
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            // =>태그가 기본적으로 가지고 있는 기능(이벤트)를 실행하지 않도록 만듬 
+
+            const inputValue = inputEl.value;
+            // =>선택한 인풋태그의 value값을 가져옴
+ 
+            // console.log(`유저가 입력한 값: ${inputValue}`);
+
+            for(let i = 1; i < 9; i++){
+                document.write(`${inputValue} x ${i} = ${inputValue * i} <br>`);
+            }
+        }
+
+        formEl.addEventListener('submit', handleSubmit);
+
+    </script>
+
+</body>
+</html>

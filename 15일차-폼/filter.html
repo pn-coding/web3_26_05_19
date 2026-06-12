@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="title"></div>
+    <div class="desc"></div>
+    
+    <script>
+
+        const menus = [
+            {
+                id:0,
+                name: "초밥",
+                sideMenu: "냉모밀"
+            },
+            {
+                id:1,
+                name: "국밥",
+                sideMenu: "소주"
+            },
+            {
+                id:2,
+                name: "진라면",
+                sideMenu: "밥"
+            },
+            {
+                id:3,
+                name: "떡볶이",
+                sideMenu: "튀김"
+            },
+            {
+                id:4,
+                name: "비빔밥",
+                sideMenu: "김치"
+            },
+        ];
+
+        // *필터
+        // =>배열.filter((매개변수)=>{값});
+        // =>선택한 배열 안에 있는 값중 원하는 값을 필터링함 
+
+        const text = prompt("내용 입력");
+
+        const titleEl = document.querySelector('.title');
+        const descEl = document.querySelector('.desc');
+
+        const reuslt = menus.filter((data) => data.name === text);
+   
+        console.log(reuslt)
+        titleEl.innerText = `검색 메뉴: ${reuslt[0].name}`
+        descEl.innerText = `사이드 메뉴: ${reuslt[0].sideMenu}`
+
+    </script>
+
+</body>
+</html>

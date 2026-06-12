@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form>
+        <input class="search" type="text" placeholder="검색">
+        <button>검색</button>
+    </form>
+
+    <div class="result_wrap">
+        <h2 class="result">검색결과</h2>
+        <h3 class="title"></h3>
+        <h3 class="description"></h3>
+    </div>
+    
+    <script>
+
+        // *문제 
+        // =>아래 영화 데이터를 5개 이상 저장
+        // =>유저가 영화를 검색했을때 검색한 영화의 정보 보여주기 
+        // =>만약 검색 결과가 없으면 '검색 결과가 없습니다'로 보여주기
+
+        const formEl = document.querySelector('form');
+        const inputEl = document.querySelector('input');
+        const titleEl = document.querySelector('.title');
+        const descriptionEl = document.querySelector('.description');
+
+
+        const movies = [
+            {
+                id:0,
+                title: '군체',
+                description: '인간을 좀비처럼 만드는 바이러스가 퍼지기 시작한다. 그 이후, 많은 사람이 바이러스에 무방비하게 노출되기 시작하고, 생존자들은 재앙에 맞서 살아남을 방법을 찾아 나선다.',
+                date: '2026년 5월 21일',
+                score: '6.9'
+            },
+            {
+                id:1,
+                title: '와일드 씽',
+                description: '가요계에서 큰 사랑을 받다가 하루아침에 해체된 혼성 그룹 "트라이앵글"이 20년 만에 찾아온 재기 기회를 놓치지 않기 위해 고군분투한다',
+                date: '2026년 6월 3일',
+                score: '8.6'
+            },
+            {
+                id:2,
+                title: '백룸' ,
+                description: '《백룸》은 2026년 개봉한 미국의 초자연 SF 공포 영화이다. 케인 파슨스의 동명 크리피파스타를 영화화한 작품이다. 파슨스가 직접 연출하였고, 추이텔 에지오포, 레나테 레인스베, 마크 듀플래스, 핀 베넷, 루키타 맥스웰이 출연하였다',
+                date: '2026년 5월 27일',
+                score: '8.15' 
+            },
+            {
+                id:3,
+                title: '토이 스토리 5',
+                description: '《토이 스토리 5》는 2026년 개봉 예정인 미국의 모험 코미디 애니메이션 영화이다. 앤드루 스탠턴이 각본 및 감독을 맡았다. 《토이 스토리》 시리즈의 다섯 번째 작품이자 《토이 스토리 4》의 속편이다',
+                date: '2026년 6월 17일',
+                score: ''
+            },
+            {
+                id:4,
+                title: '상자 속의 양',
+                description: '"상자 속의 양"은 2026년 개봉한 일본의 SF 드라마 영화이다. 고레에다 히로카즈가 감독과 각본을 맡았다. 제79회 칸 영화제 황금종려상 경쟁 후보작이다.',
+                date: '2026년 6월 10일',
+                score: '6.3'
+            },
+        ]
+
+        
+        const handleSubmit = (e) => {
+            e.preventDefault();
+            const inputValue = inputEl.value;
+            
+            const result = movies.filter(data => {return data.title === inputValue});
+            console.log(result);
+
+            if(result.length !== 0){
+                titleEl.innerText = result[0].title;
+                descriptionEl.innerText = result[0].description;
+            }else{
+                titleEl.innerText = inputValue;
+                descriptionEl.innerText = `${inputValue} 의 검색 결과가 없습니다.`;
+            }
+            
+        }
+
+        formEl.addEventListener('submit', handleSubmit)
+        
+    </script>
+
+</body>
+</html>
