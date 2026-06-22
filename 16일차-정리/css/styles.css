@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Noto Sans KR", sans-serif;
+}
+/* reset end */
+
+section{
+    padding: 150px;
+}
+/* common end */
+
+header{
+    padding: 8px 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.logo{
+    font-size: 24px;
+}
+
+.menu_btn{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.section_1{
+    height: 100vh;
+    background-color: lightgray;
+}
+
+.con_wrap_2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.con_2{
+    width: 500px;
+    height: 500px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.con_2:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
