@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .con{
+            max-width: 500px;
+            width: 100%;
+            margin: 100px auto;
+            border: 1px solid #dbdbdb;
+        }
+
+        .bg{
+            height: 300px;
+            background-color: lightgray;
+        }
+
+        .title_wrap{
+            padding: 20px;
+        }
+
+        .title_wrap h3{
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .title_wrap p{
+            color: gray;
+        }
+
+        .dark_btn{
+            width: 50px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border-radius: 15px;
+            background-color: navy;
+            color: white;
+            cursor: pointer;
+        }
+
+        body.dark_active{
+            background-color: #1d1d1d;
+        }
+
+        body.dark_active .con{
+            border-color: #555;
+        }
+
+        body.dark_active .con h3{
+            color: white;
+        }
+
+        body.dark_active .dark_btn{
+            background-color: rgba(255, 255, 255, 0.3);
+            color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="con">
+
+        <div class="bg"></div>
+        <div class="title_wrap">
+
+            <h3>This is content title</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam iure vel fuga. Assumenda ullam quisquam, numquam nobis excepturi quo dolores voluptas illo? 
+            </p>
+
+            <div class="dark_btn">
+                <i class="fa-solid fa-moon"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // *문제 
+        // => 버튼 클릭하면 다크모드 적용 
+        // => 한번더 클릭하면 라이트 모드로 변경
+        // => 새로고침되도 유지되게 만들기 
+        // => 버튼 클릭때마다 버튼 아이콘 변경 
+        // ex) moon -> sun 아이콘 
+
+        const darkBtn = document.querySelector('.dark_btn');
+        const getActive = localStorage.getItem('DARK_MODE');
+
+        if(getActive === "on"){
+            document.body.classList.add('dark_active');
+            darkBtn.innerHTML = '<i class="fa-solid fa-sun"></i>'
+        }
+
+        const darkHandler = () => {
+            const getActive = localStorage.getItem('DARK_MODE');
+
+            if(getActive === null){
+                localStorage.setItem("DARK_MODE", "on");
+                document.body.classList.add('dark_active');
+                darkBtn.innerHTML = '<i class="fa-solid fa-sun"></i>'
+            }else if(getActive === "on"){
+                localStorage.removeItem("DARK_MODE", "on");
+                document.body.classList.remove('dark_active');
+                darkBtn.innerHTML = '<i class="fa-solid fa-moon"></i>'
+            }
+        }
+
+        darkBtn.addEventListener('click', darkHandler);
+
+    </script>
+
+</body>
+</html>
