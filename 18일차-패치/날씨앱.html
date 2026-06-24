@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="wrap">
+
+        <h2>날씨</h2>
+        
+        <div class="location">
+            <h3>
+                지역: <span></span>
+            </h3>
+        </div>
+
+        <div class="temp">
+            <h3>
+                온도: <span>0</span>도
+            </h3>
+        </div>
+
+        <div class="current_weather">
+            <h3>
+                날씨: <span></span>
+            </h3>
+        </div>
+
+    </div>
+
+    <script>
+
+        const API_KEY = '';
+        const locationEl = document.querySelector('.location span');
+        const tempEl = document.querySelector('.temp span');
+        const currentWeatherEl = document.querySelector('.current_weather span');
+
+        const weather = (pos) => {
+            console.log(`위도: ${pos.coords.latitude}`);
+            console.log(`경도: ${pos.coords.longitude}`);
+            const lat = pos.coords.latitude;
+            const lon = pos.coords.longitude;
+
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`;  
+
+            fetch(url).then((res) => res.json()).then((data) => {
+                console.log(data);
+                const name = data.name;
+                const temp = Math.round(data.main.temp);
+                const currentWeather = data.weather[0].description
+
+                locationEl.innerText = name;
+                tempEl.innerText = temp;
+                currentWeatherEl.innerText = currentWeather;
+            });
+        }
+
+        navigator.geolocation.getCurrentPosition(weather);
+
+
+
+
+    </script>
+
+</body>
+</html>
