@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="weather-card">
+      <div class="loading">날씨 불러오는 중...</div>
+
+      <div class="weather" style="display: none">
+        <div class="time"></div>
+
+        <div class="location"></div>
+
+        <div class="icon">
+          <img src="" alt="" />
+        </div>
+
+        <div class="temp">0°</div>
+
+        <div class="desc"></div>
+
+        <div class="info">
+          <div class="box">
+            <p>체감온도</p>
+            <p class="feel"></p>
+          </div>
+
+          <div class="box">
+            <p>습도</p>
+            <p class="humidity"></p>
+          </div>
+
+          <div class="box">
+            <p>최고온도</p>
+            <p class="max"></p>
+          </div>
+
+          <div class="box">
+            <p>풍속</p>
+            <p class="wind"></p>
+          </div>
+        </div>
+
+        <div class="clothing"></div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

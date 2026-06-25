@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  color: black;
+}
+
+.weather-card {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  color: black;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.loading {
+  font-size: 18px;
+}
+
+.time {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.location {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.icon img {
+  width: 120px;
+}
+
+.temp {
+  font-size: 56px;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.box {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.box p:first-child {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.box p:last-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.clothing {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 15px;
+  font-size: 18px;
+}
